@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   def create
     user = params[:sessions][:name]
 
-
     session[:user_id] = user
 
     redirect_to root_url
