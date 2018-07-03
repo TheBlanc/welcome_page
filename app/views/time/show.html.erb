@@ -1,0 +1,20 @@
+<section class="greeting">
+  <div class="time">
+  <% if current_user %>
+    <h2>Hello, <%= current_user %></h1>
+  <% else %>
+    <h2>Hello</h1>
+  <% end %>
+    <h1><%= Time.now.strftime("%H:%M") %></h1>
+  </div>
+</section>
+
+<% if current_user %>
+  <div class="log-in">
+    <p><%= link_to "Sign out", session_url, method: :delete %></p>
+  </div>
+<% else %>
+  <div class="log-in">
+    <%= link_to "Sign In", new_session_url %>
+  </div>
+<% end %>

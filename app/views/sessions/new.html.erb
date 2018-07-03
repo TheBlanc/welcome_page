@@ -1,0 +1,14 @@
+<section class="welcome">
+  <div class="container">
+    <h1>Welcome,</h1>
+    <%= form_for :sessions, url: session_path do |f| %>
+     <div>
+       <%= f.label :name %>
+       <%= f.text_field :name %>
+     </div>
+     <div>
+       <%= f.submit "Enter" %>
+     </div>
+    <% end %>
+  </div>
+</section>
